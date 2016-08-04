@@ -1,0 +1,22 @@
+.output{
+	font-weight: bold;
+}
+#payment{
+	text-decoration: underline;
+}
+
+#graph{
+	border: solid black 1px;
+	width: 400px;
+	height: 250px;
+}
+
+th,td{
+	vertical-align: top;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+}

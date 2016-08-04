@@ -5,14 +5,42 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>putaoweb</title>
 	<link rel="stylesheet" type="text/css" href="common/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 	<section class="demo-container baymax-container">
 		<a href="http://www.putaowebs.com" class="baymax"></a>
 	</section>
 
-	<div style="position: absolute;left: 42%;">
-		<h2>欢迎来到葡萄园~~~</h2>
-	</div>
+	<section>
+		<table>
+			<tr><th>Enter loan Data:</th>
+				<td></td>
+				<th>Load Blance,Cumulative Equity,And Interrest Payments</th></tr>
+			<tr><td>Amount of the Loan($):</td>
+				<td><input id="amount" onchange="calculate();"></td>
+				<td rowspan=8>
+					<canvas id="graph"></canvas>
+				</td></tr>
+			<tr><td>Annual interest(%):</td>
+				<td><input id="apr" onchange="calculate();"></td></tr>
+			<tr><td>Repayment period(years):</td>
+				<td><input id="years" onchange="calculate();"></td></tr>
+			<tr><td>Zipcode (to find lenders):</td>
+				<td><input id="zipcode" onchange="calculate();"></td></tr>
+			<tr><th>Aproximate Payments:</th>
+				<td><button onclick="calculate()">Calculate</button></td></tr>
+			<tr><td>Monthly Payment:</td>
+				<td>$<span id="payment" class="output"></span></td></tr>
+			<tr><td>Total Payment:</td>
+				<td>$<span id="total" class="output"></span></td></tr>
+			<tr><td>Total Interest:</td>
+				<td>$<span id="totalinterest" class="output"></span></td></tr>
+			<tr><th>Sponsers:</th><td colspan=2>
+				Apply for your loan with one of these fine lenders:
+				<div id="lenders"></div></td></tr>
+		</table>
+	</section>
 </body>
 </html>
